@@ -1,0 +1,29 @@
+model:
+  vocab_size: 32000
+  n_embd: 2048
+  n_layer: 24
+  n_head: 16
+  max_position_embeddings: 2048
+
+training:
+  batch_size: 8
+  micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  epochs: 3
+  lr: 2e-4
+  warmup_steps: 500
+  max_grad_norm: 1.0
+  weight_decay: 0.01
+  save_every_steps: 1000
+  eval_steps: 500
+
+data:
+  tokenizer_model: ../../packages/afritalk-tokenizer/models/afritalk_spm.model
+  train_data_dir: ../../data/processed
+  val_split_ratio: 0.01
+
+inference:
+  max_new_tokens: 128
+  temperature: 0.8
+  top_k: 50
+  top_p: 0.95

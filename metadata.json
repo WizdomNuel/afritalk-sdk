@@ -1,0 +1,5 @@
+{
+  "name": "AfriTalk Platform",
+  "description": "An African-language AI infrastructure platform comprising a core SDK and a REST API service.",
+  "requestFramePermissions": []
+}
